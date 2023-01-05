@@ -18,5 +18,8 @@
   "homepage": "https://github.com/simonepizzoleo/simonepizzoleo-portfolio#readme",
   "dependencies": {
     "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "aos": "^2.3.4"
   }
 }

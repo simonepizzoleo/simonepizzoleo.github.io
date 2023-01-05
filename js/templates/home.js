@@ -1,3 +1,4 @@
+import AOS from "aos";
 import Swiper from "swiper";
 
 const HOME = {
@@ -5,8 +6,62 @@ const HOME = {
     // Initialize all the Functions
     init: function() {
 
+        AOS.init();
+        this.setupScrollEffects();
         this.setupToolsSlider();
         this.setupWorksGSAP();
+
+    },
+
+    // Setup some Effects on Scroll
+    setupScrollEffects: function() {
+        
+        // Tools
+        gsap.from('.home-tools__grid', {
+
+            y: 100,
+            opacity: 0,
+            
+            scrollTrigger: {
+                trigger: '.home-tools_heading',
+                scrub: 2,
+                end: 'bottom 100px'
+            }
+
+        });
+
+        // Ebook
+        gsap.from('.home-ebook__image', {
+
+            y: 100,
+
+            scrollTrigger: {
+                trigger: '.home-ebook__image',
+                scrub: 2,
+                end: 'top'
+            }
+
+        });
+
+        // Works
+        const WORKS = document.querySelectorAll('.home-works__item');
+
+        for (const WORK of WORKS) {
+
+            gsap.from(WORK, {
+
+                opacity: 0,
+                scale: 0.85,
+
+                scrollTrigger: {
+                    trigger: WORK,
+                    end: 'top 150px',
+                    scrub: 2
+                }
+
+            });
+
+        }
 
     },
 
@@ -55,7 +110,8 @@ const HOME = {
                 pin: true,
                 scrub: 1,
                 snap: 1 / (WORKS.length - 1),
-                end: () => "+=" + document.querySelector('.home-works').offsetWidth
+                start: '-' + (window.innerHeight - document.querySelector('.home-works').offsetHeight) / 2,
+                end: () => '+=' + document.querySelector('.home-works').offsetWidth
             }
 
         });
