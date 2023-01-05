@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;">
 
 <head>
 
@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="home">
 
     <!-- Header -->
     <header>
@@ -79,63 +79,68 @@
         <h2 class="home-tools_heading">Alcuni tra gli strumenti che utilizzo quotidianamente</h2>
 
         <!-- Grid -->
-        <div class="home-tools__grid">
+        <div class="home-tools__grid swiper">
 
-            <!-- Adobe XD -->
-            <article class="home-tools__item">
+            <!-- Slider -->
+            <div class="swiper-wrapper">
 
-                <!-- Icon -->
-                <img class="home-tools__item-icon" src="./images/adobe-xd-icon.svg" alt="Adobe XD" />
+                <!-- Adobe XD -->
+                <article class="swiper-slide home-tools__item">
 
-                <!-- Name -->
-                <h6 class="home-tools__item-name">Adobe XD</h6>
+                    <!-- Icon -->
+                    <img class="home-tools__item-icon" src="./images/adobe-xd-icon.svg" alt="Adobe XD" />
 
-                <!-- Description -->
-                <p class="home-tools__item-description">Ideating and Designing the pixel-perfect Interfaces</p>
+                    <!-- Name -->
+                    <h6 class="home-tools__item-name">Adobe XD</h6>
 
-            </article>
+                    <!-- Description -->
+                    <p class="home-tools__item-description">Ideating and Designing the pixel-perfect Interfaces</p>
 
-            <!-- JavaScript -->
-            <article class="home-tools__item">
+                </article>
 
-                <!-- Icon -->
-                <img class="home-tools__item-icon" src="./images/javascript-icon.svg" alt="JavaScript" />
+                <!-- JavaScript -->
+                <article class="swiper-slide home-tools__item">
 
-                <!-- Name -->
-                <h6 class="home-tools__item-name">JavaScript</h6>
+                    <!-- Icon -->
+                    <img class="home-tools__item-icon" src="./images/javascript-icon.svg" alt="JavaScript" />
 
-                <!-- Description -->
-                <p class="home-tools__item-description">Adding interactivity to visitors' interaction with the website</p>
+                    <!-- Name -->
+                    <h6 class="home-tools__item-name">JavaScript</h6>
 
-            </article>
+                    <!-- Description -->
+                    <p class="home-tools__item-description">Adding interactivity to visitors' interaction with the website</p>
 
-            <!-- CSS3 and SCSS -->
-            <article class="home-tools__item">
+                </article>
 
-                <!-- Icon -->
-                <img class="home-tools__item-icon" src="./images/sass-icon.svg" alt="CSS3 and SCSS" />
+                <!-- CSS3 and SCSS -->
+                <article class="swiper-slide home-tools__item">
 
-                <!-- Name -->
-                <h6 class="home-tools__item-name">CSS3 and SCSS</h6>
+                    <!-- Icon -->
+                    <img class="home-tools__item-icon" src="./images/sass-icon.svg" alt="CSS3 and SCSS" />
 
-                <!-- Description -->
-                <p class="home-tools__item-description">Styling the Page with advanced CSS techniques, enhanced and optimized for Browsers</p>
+                    <!-- Name -->
+                    <h6 class="home-tools__item-name">CSS3 and SCSS</h6>
 
-            </article>
+                    <!-- Description -->
+                    <p class="home-tools__item-description">Styling the Page with advanced CSS techniques, enhanced and optimized for Browsers</p>
 
-            <!-- Semantic HTML5 -->
-            <article class="home-tools__item">
+                </article>
 
-                <!-- Icon -->
-                <img class="home-tools__item-icon" src="./images/html-icon.svg" alt="Semantic HTML5" />
+                <!-- Semantic HTML5 -->
+                <article class="swiper-slide home-tools__item">
 
-                <!-- Name -->
-                <h6 class="home-tools__item-name">Semantic HTML5</h6>
+                    <!-- Icon -->
+                    <img class="home-tools__item-icon" src="./images/html-icon.svg" alt="Semantic HTML5" />
 
-                <!-- Description -->
-                <p class="home-tools__item-description">Writing the Page Markup with Semantic HTML</p>
+                    <!-- Name -->
+                    <h6 class="home-tools__item-name">Semantic HTML5</h6>
 
-            </article>
+                    <!-- Description -->
+                    <p class="home-tools__item-description">Writing the Page Markup with Semantic HTML</p>
+
+                </article>
+
+            </div>
 
         </div>
 
@@ -226,6 +231,9 @@
         </div>
 
     </footer>
+
+    <!-- Scripts -->
+    <script src="./js/master-min.js"></script>
     
 </body>
 </html>
