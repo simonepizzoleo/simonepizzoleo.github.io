@@ -12,6 +12,12 @@
     font-weight: 500;
     color: $color-white;
     text-align: center;
+
+    // [State] Hover
+    &:hover {
+        background-color: $color-primary-hover;
+    }
+
 }
 
 // Blue Button

@@ -74,6 +74,12 @@ header {
                     line-height: 24px;
                     color: $color-primary-light;
                     font-weight: 300;
+
+                    // [State] Hover
+                    &:hover {
+                        color: $color-white;
+                    }
+
                 }
 
                 // Button
@@ -84,6 +90,12 @@ header {
                         font-weight: 400;
                         color: $color-white;
                         background-color: $color-primary;
+
+                        // [State] Hover
+                        &:hover {
+                            background-color: $color-primary-hover;
+                        }
+
                     }
 
                 }

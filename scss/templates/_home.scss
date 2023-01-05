@@ -209,6 +209,7 @@ body.home {
         &::after {
             background: url('../images/ebook-cover.png') no-repeat center;
             background-size: cover;
+            image-rendering: -webkit-optimize-contrast;
         }
 
     }

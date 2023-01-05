@@ -24,6 +24,10 @@ html {
     color: $color-white;
 }
 
+:disabled {
+    cursor: not-allowed;
+}
+
 article,
 aside,
 audio,
@@ -58,10 +62,12 @@ svg {
 img {
     object-fit: cover;
     object-position: center;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 a {
     text-decoration: none;
+    transition: 0.3s ease;
 
     img,
     svg {
