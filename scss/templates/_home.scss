@@ -257,6 +257,35 @@ body.home {
     background-color: $color-primary-dark;
     margin: 0 0 100px 0;
 
+    // Item
+    &__item {
+        
+        // Image
+        &-image {
+            display: block;
+            margin: 0 0 30px 0;
+            border-radius: 8px;
+        }
+
+        // Heading
+        &-heading {
+            color: $color-white;
+            margin: 0 0 15px 0;
+        }
+
+        // Description
+        &-description {
+            color: $color-primary-light;
+            margin: 0 0 30px 0;
+        }
+
+        // Button
+        &-button {
+            width: 100%;
+        }
+
+    }
+
     @include bp-md {
 
         & {
