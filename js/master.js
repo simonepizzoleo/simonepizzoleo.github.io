@@ -4,4 +4,4 @@ import { HOME } from "./templates/home";
 
 // Start necessary JS Files
 
-HOME.init();
+if (document.querySelector('body.home')) HOME.init();

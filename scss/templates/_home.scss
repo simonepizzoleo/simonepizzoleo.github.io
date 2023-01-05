@@ -6,7 +6,7 @@ body.home {
 
 // Hero
 .home-hero {
-    margin: 0 0 100px 0;
+    margin: -1px 0 100px 0;
     background-color: $color-primary-dark;
     text-align: center;
     padding: 50px 0 260px 0;
@@ -257,14 +257,33 @@ body.home {
     background-color: $color-primary-dark;
     margin: 0 0 100px 0;
 
+    // Container
+    &__container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+    }
+
     // Item
     &__item {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         
         // Image
         &-image {
             display: block;
-            margin: 0 0 30px 0;
+            width: 100%;
+            height: 200px;
             border-radius: 8px;
+        }
+
+        // Content
+        &-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         // Heading
@@ -282,6 +301,8 @@ body.home {
         // Button
         &-button {
             width: 100%;
+            max-width: 300px;
+            margin: auto auto 0 auto;
         }
 
     }
@@ -291,6 +312,48 @@ body.home {
         & {
             padding: 100px 0;
             margin: 0 0 150px 0;
+
+            // Container
+            &__container {
+                gap: 100px;
+            }
+
+            // Item
+            &__item {
+                display: grid;
+                grid-template-columns: 1.1fr 1fr;
+                align-items: center;
+                column-gap: 80px;
+
+                // Image
+                &-image {
+                    height: 100%;
+                }
+
+                // Content
+                &-content {
+                    display: block;
+                }
+
+                // Heading
+                &-heading {
+                    margin: 0 0 20px 0;
+                }
+
+                // Description
+                &-description {
+                    margin: 0 0 60px 0;
+                }
+
+                // Button
+                &-button {
+                    width: fit-content;
+                    max-width: unset;
+                    margin: unset;
+                }
+
+            }
+
         }
 
     }

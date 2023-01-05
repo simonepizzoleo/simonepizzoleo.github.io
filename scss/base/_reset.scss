@@ -6,6 +6,8 @@ html {
     font-size: 62.5%; // 1rem equals 10px
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: 50px;
+    scroll-behavior: smooth;
 }
 
 *,

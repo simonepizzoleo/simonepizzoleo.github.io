@@ -6,6 +6,7 @@ const HOME = {
     init: function() {
 
         this.setupToolsSlider();
+        this.setupWorksGSAP();
 
     },
 
@@ -30,6 +31,31 @@ const HOME = {
                     slidesPerView: 3
                 }
 
+            }
+
+        });
+
+    },
+
+    // Setup GSAP for forcing Horizontal Scroll
+    // on the Works Section
+    setupWorksGSAP: function() {
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const WORKS = gsap.utils.toArray('.home-works__item');
+
+        gsap.to(WORKS, {
+
+            xPercent: -100 * (WORKS.length - 1),
+            ease: "none",
+            
+            scrollTrigger: {
+                trigger: ".home-works",
+                pin: true,
+                scrub: 1,
+                snap: 1 / (WORKS.length - 1),
+                end: () => "+=" + document.querySelector('.home-works').offsetWidth
             }
 
         });
