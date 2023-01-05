@@ -27,6 +27,7 @@ header {
 
     // Hamburger
     &__hamburger {
+        cursor: pointer;
         display: block;
         width: 75px;
         height: 75px;
@@ -35,6 +36,80 @@ header {
         align-items: center;
         justify-content: center;
         color: transparent;
+
+        // Selection
+        &::selection {
+            color: transparent;
+        }
+
+    }
+
+    // Menu
+    &__menu {
+        display: none;
+
+        // First Level
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            &,
+            li {
+                padding: unset;
+                margin: unset;
+            }
+
+            li {
+
+                &,
+                a {
+                    display: block;
+                }
+                
+                a {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $color-primary-light;
+                    font-weight: 300;
+                }
+
+                // Button
+                &:last-of-type {
+
+                    a {
+                        padding: 30px;
+                        font-weight: 400;
+                        color: $color-white;
+                        background-color: $color-primary;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    @include bp-md {
+
+        & {
+            
+            // Hamburger
+            &__hamburger {
+                display: none;
+            }
+
+            // Menu
+            &__menu {
+                display: block;
+            }
+            
+        }
+
     }
 
 }

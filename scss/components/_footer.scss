@@ -1,0 +1,66 @@
+// SCSS for Footer
+
+footer {
+    background-color: $color-primary-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+
+    // Logo
+    &__logo {
+        display: none;
+    }
+
+    // Socials
+    &__socials {
+        flex-wrap: wrap;
+        gap: 2px;
+
+        &,
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        // Item
+        a {
+            width: 75px;
+            height: 75px;
+            background-color: rgba(48, 55, 248, 0.5);
+            
+            // Icon
+            svg {
+                display: block;
+                width: 24px;
+                height: auto;
+            }
+
+        }
+
+    }
+
+    @include bp-sm {
+
+        & {
+            
+            // Container
+            &__container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            // Logo
+            &__logo {
+                display: block;
+            }
+
+        }
+
+    }
+
+}

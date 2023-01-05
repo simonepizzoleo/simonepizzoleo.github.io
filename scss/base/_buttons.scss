@@ -1,0 +1,20 @@
+// Buttons
+
+@mixin button {
+    display: block;
+    width: fit-content;
+    padding: 17px 30px;
+    background-color: $color-primary;
+    font-family: $font-primary;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $color-white;
+    text-align: center;
+}
+
+// Blue Button
+.button {
+    @include button;
+}

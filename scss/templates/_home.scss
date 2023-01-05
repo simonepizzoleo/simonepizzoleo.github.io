@@ -2,7 +2,7 @@
 
 // Hero
 .home-hero {
-    margin: -1px 0 100px 0;
+    margin: 0 0 100px 0;
     background-color: $color-primary-dark;
     text-align: center;
     padding: 50px 0 260px 0;
@@ -61,6 +61,219 @@
             &__description {
                 font-size: 20px;
                 line-height: 37px;
+            }
+
+        }
+
+    }
+
+}
+
+// Tools
+.home-tools {
+    margin: 0 auto 100px auto;
+
+    // Heading
+    &__heading {
+        margin: 0 0 30px 0;
+    }
+
+    // Item
+    &__item {
+        border-radius: 8px;
+        padding: 50px;
+        background-color: $color-white;
+        box-shadow: 0 60px 99px 0 rgba(90, 90, 90, 0.05);
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        // Icon
+        &-icon {
+            display: block;
+            width: auto;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        // Name
+        &-name {
+            margin: auto 0 0 0;
+        }
+
+        // Description
+        &-description {
+            margin: unset;
+            opacity: 1;
+        }
+
+    }
+
+    @include bp-md {
+
+        & {
+            margin: 0 auto 200px auto;
+        }
+
+    }
+
+}
+
+// eBook
+.home-ebook {
+    margin: 0 auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+
+    // Image
+    &__image {
+        margin: 0 0 40px 0;
+        width: 100%;
+        max-width: 280px;
+        height: 400px;
+        position: relative;
+        transform: rotate(-1deg);
+        border-radius: 8px;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+        }
+
+        // Shadow
+        &::before {
+            position: absolute;
+            background: linear-gradient(to bottom, $color-primary, transparent);
+            transform: rotate(-8deg);
+            z-index: -1;
+        }
+
+        // Cover
+        &::after {
+            background: url('../images/ebook-cover.png') no-repeat center;
+            background-size: cover;
+        }
+
+    }
+
+    // Content
+    &__content {
+        text-align: center;
+    }
+
+    // Heading
+    &__heading {
+        margin: 0 0 20px 0;
+    }
+
+    // Description
+    &__description {
+        margin: 0 0 40px 0;
+    }
+
+    // Button
+    &__button {
+        width: 100%;
+    }
+
+    @include bp-md {
+
+        & {
+            max-width: 960px;
+            display: grid;
+            grid-template-columns: 375px auto;
+            column-gap: 100px;
+            margin: 0 auto 200px auto;
+
+            // Image
+            &__image {
+                margin: unset;
+                max-width: unset;
+                height: 525px;
+            }
+
+            // Content
+            &__content {
+                text-align: left;
+            }
+
+            // Heading
+            &__heading {
+                margin: 0 0 30px 0;
+            }
+
+            // Description
+            &__description {
+                margin: 0 0 60px 0;
+            }
+
+            // Button
+            &__button {
+                width: fit-content;
+            }
+
+        }
+
+    }
+
+}
+
+// Works
+.home-works {
+    padding: 50px 0;
+    background-color: $color-primary-dark;
+    margin: 0 0 100px 0;
+
+    @include bp-md {
+
+        & {
+            padding: 100px 0;
+            margin: 0 0 150px 0;
+        }
+
+    }
+
+}
+
+// Mail
+.home-mail {
+    margin: 0 auto 100px auto;
+    max-width: 770px;
+    text-align: center;
+
+    // Heading
+    &__heading {
+        margin: 0 auto 20px auto;
+        max-width: 500px;
+    }
+
+    // Description
+    &__description {
+        margin: 0 auto 40px auto;
+        max-width: 570px;
+    }
+
+    // Button
+    &__button {
+        margin: 0 auto;
+    }
+
+    @include bp-md {
+
+        & {
+            margin: 0 auto 150px auto;
+
+            // Heading
+            &__heading {
+                max-width: unset;
             }
 
         }
