@@ -1,0 +1,70 @@
+// SCSS for Homepage
+
+// Hero
+.home-hero {
+    margin: -1px 0 100px 0;
+    background-color: $color-primary-dark;
+    text-align: center;
+    padding: 50px 0 260px 0;
+    position: relative;
+    overflow: hidden;
+
+    // Ellpises
+    &::after {
+        content: '';
+        display: block;
+        width: 430px;
+        height: 430px;
+        background: url('../images/ellipses-blue.svg') no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: calc(100% - 200px);
+        left: calc(50% - 215px);
+    }
+
+    // Heading
+    &__heading {
+        color: $color-white;
+        margin: 0 auto 20px auto;
+        max-width: 970px;
+    }
+
+    // Description
+    &__description {
+        color: $color-primary-light;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 300;
+        max-width: 570px;
+    }
+
+    @include bp-md {
+
+        & {
+            padding: 100px 0 370px 0;
+
+            // Ellipses
+            &::after {
+                width: 555px;
+                height: 555px;
+                top: calc(100% - 290px);
+                left: calc(50% - 277.5px);
+            }
+
+            // Heading
+            &__heading {
+                margin: 0 auto 40px auto;
+            }
+
+            // Description
+            &__description {
+                font-size: 20px;
+                line-height: 37px;
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,73 @@
+// Reset
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%; // 1rem equals 10px
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    font: inherit;
+    box-sizing: border-box;
+    margin: unset;
+    padding: unset;
+}
+
+::selection {
+    background: $color-primary;
+}
+
+article,
+aside,
+audio,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+img,
+main,
+nav,
+progress,
+section,
+summary,
+video {
+    display: block;
+}
+
+object,
+embed {
+    height: 100%;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
+a {
+    text-decoration: none;
+
+    img,
+    svg {
+        display: block;
+    }
+
+}
+
+button {
+    border: unset;
+    background-color: unset;
+}

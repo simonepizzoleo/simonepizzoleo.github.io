@@ -1,0 +1,39 @@
+// Colors
+
+$color-primary: #3037F8;
+$color-primary-light: #AFB2FF;
+$color-primary-dark: #181932;
+
+$color-white: #FFFFFF;
+$color-gray: #E9E9E9;
+$color-black: #000000;
+
+// Fonts
+
+$font-primary: 'Inter', sans-serif;
+
+// Breakpoints
+
+@mixin bp-sm {
+    
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+
+}
+
+@mixin bp-md {
+    
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+
+}
+
+@mixin bp-lg {
+    
+    @media only screen and (min-width: 1440px) {
+        @content;
+    }
+
+}

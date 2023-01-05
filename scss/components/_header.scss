@@ -1,0 +1,40 @@
+// SCSS for Header
+
+header {
+    background-color: $color-primary-dark;
+}
+
+.header {
+
+    // Container
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    // Logo
+    &__logo {
+        display: block;
+        font-size: 12px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color-primary-light;
+        letter-spacing: 2.4px;
+        font-weight: 500;
+    }
+
+    // Hamburger
+    &__hamburger {
+        display: block;
+        width: 75px;
+        height: 75px;
+        background-color: $color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent;
+    }
+
+}
