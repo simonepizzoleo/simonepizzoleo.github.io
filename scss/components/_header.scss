@@ -44,6 +44,72 @@ header {
             color: transparent;
         }
 
+        // Label
+        &-label {
+            position: absolute;
+            top: -10000000px;
+            left: -10000000px;
+        }
+
+        // Wrapper
+        &-wrapper {
+            width: 25px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: transform 0.3s ease;
+
+            // Lines
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+            }
+
+            &::before {
+                top: 0;
+                transform-origin: top left;
+            }
+
+            &::after {
+                bottom: 0;
+                transform-origin: bottom left;
+            }
+
+        }
+
+        // Lines
+        &-wrapper::before,
+        &-wrapper::after,
+        &-line {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: $color-white;
+            transition: 0.3s ease;
+        }
+
+        // [State] Active
+        &.active &-wrapper {
+            transform: translateX(5px);
+        }
+        
+        &.active &-wrapper::before {
+            transform: rotate(45deg);
+            top: -1px;
+        }
+
+        &.active &-line {
+            opacity: 0;
+        }
+
+        &.active &-wrapper::after {
+            transform: rotate(-45deg);
+        }
+
     }
 
     // Menu
