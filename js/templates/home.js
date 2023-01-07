@@ -120,4 +120,5 @@ const HOME = {
 
 }
 
+// Export the JS File
 export { HOME };

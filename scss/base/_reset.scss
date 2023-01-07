@@ -10,6 +10,16 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+
+    // [State] Locked
+    &.locked {
+        overflow: hidden;
+    }
+
+}
+
 *,
 *::before,
 *::after {
