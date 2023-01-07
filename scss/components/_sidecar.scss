@@ -1,0 +1,73 @@
+// SCSS for Sidecar
+
+.page-sidecar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 25, 50, 0.7);
+    backdrop-filter: blur(50px);
+    padding: 115px 40px 40px 40px;
+    z-index: 5;
+
+    // Navigation
+    &__nav {
+        margin: 0 auto 40px auto;
+        max-width: 600px;
+
+        // Menu
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            &,
+            li {
+                margin: unset;
+                padding: unset;
+            }
+
+            li {
+
+                &,
+                a {
+                    display: block;
+                    width: 100%;
+                }
+
+                a {
+                    padding: 30px;
+                    font-weight: 400;
+                }
+
+                // Remove background-color from all Buttons
+                // except from the last one
+                &:not(:last-of-type) a {
+                    background-color: unset;
+
+                    // [State] Hover
+                    &:hover {
+                        color: $color-primary-light;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    // Copyright
+    &__copyright {
+        font-size: 14px;
+        line-height: 24px;
+        opacity: 1;
+        color: $color-primary-light;
+        text-align: center;
+        margin: unset;
+    }
+
+}
