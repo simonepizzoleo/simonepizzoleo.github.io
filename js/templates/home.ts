@@ -4,7 +4,7 @@ import Swiper from "swiper";
 const HOME = {
 
     // Initialize all the Functions
-    init: function() {
+    init: function(): void {
 
         AOS.init();
         this.setupScrollEffects();
@@ -14,7 +14,7 @@ const HOME = {
     },
 
     // Setup some Effects on Scroll
-    setupScrollEffects: function() {
+    setupScrollEffects: function(): void {
         
         // Tools
         gsap.from('.home-tools__grid', {
@@ -66,7 +66,7 @@ const HOME = {
     },
 
     // Setup the Tools Slider
-    setupToolsSlider: function() {
+    setupToolsSlider: function(): void {
         
         const TOOLS_SLIDER = new Swiper('.home-tools__grid', {
             
@@ -94,7 +94,7 @@ const HOME = {
 
     // Setup GSAP for forcing Horizontal Scroll
     // on the Works Section
-    setupWorksGSAP: function() {
+    setupWorksGSAP: function(): void {
 
         gsap.registerPlugin(ScrollTrigger);
 
