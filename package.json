@@ -20,6 +20,10 @@
     "swiper": "^8.4.5"
   },
   "devDependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
