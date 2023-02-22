@@ -17,6 +17,8 @@ const HOME = {
     setupScrollEffects: function(): void {
         
         // Tools
+        
+        // @ts-ignore
         gsap.from('.home-tools__grid', {
 
             y: 100,
@@ -31,6 +33,8 @@ const HOME = {
         });
 
         // Ebook
+
+        // @ts-ignore
         gsap.from('.home-ebook__image', {
 
             y: 100,
@@ -44,10 +48,11 @@ const HOME = {
         });
 
         // Works
-        const WORKS = document.querySelectorAll('.home-works__item');
+        const WORKS: NodeListOf<HTMLDivElement> = document.querySelectorAll('.home-works__item');
 
         for (const WORK of WORKS) {
 
+            // @ts-ignore
             gsap.from(WORK, {
 
                 opacity: 0,
@@ -68,7 +73,7 @@ const HOME = {
     // Setup the Tools Slider
     setupToolsSlider: function(): void {
         
-        const TOOLS_SLIDER = new Swiper('.home-tools__grid', {
+        const TOOLS_SLIDER: Swiper = new Swiper('.home-tools__grid', {
             
             grabCursor: true,
             loop: false,
@@ -96,10 +101,17 @@ const HOME = {
     // on the Works Section
     setupWorksGSAP: function(): void {
 
+        // @ts-ignore
         gsap.registerPlugin(ScrollTrigger);
 
-        const WORKS = gsap.utils.toArray('.home-works__item');
+        // @ts-ignore
+        const WORKS: any = gsap.utils.toArray('.home-works__item');
 
+        const WORKS_CONTAINER = document.querySelector('.home-works') as HTMLDivElement;
+        const WORKS_CONTAINER_HEIGHT: number = WORKS_CONTAINER.offsetHeight;
+        const WORKS_CONTAINER_WIDTH: number = WORKS_CONTAINER.offsetWidth;
+
+        // @ts-ignore
         gsap.to(WORKS, {
 
             xPercent: -100 * (WORKS.length - 1),
@@ -110,8 +122,8 @@ const HOME = {
                 pin: true,
                 scrub: 1,
                 snap: 1 / (WORKS.length - 1),
-                start: '-' + (window.innerHeight - document.querySelector('.home-works').offsetHeight) / 2,
-                end: () => '+=' + document.querySelector('.home-works').offsetWidth
+                start: '-' + (window.innerHeight - WORKS_CONTAINER_HEIGHT) / 2,
+                end: () => '+=' + WORKS_CONTAINER_WIDTH
             }
 
         });
